@@ -1,0 +1,31 @@
+page-calendario {
+
+    .square {
+        background: #000;
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .square h1 {
+        color: #fff;
+        text-align: center;
+        position: relative;
+        top: 26%;
+    }
+
+    .square p {
+        color: #fff;
+        text-align: center;
+        position: relative;
+        top: 34%;
+    }
+
+    .navbar {
+        color: rgb(4, 9, 11);
+    }
+
+    ion-icon {
+        color: rgb(8, 163, 58);
+    }
+
+}

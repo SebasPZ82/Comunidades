@@ -1,0 +1,49 @@
+.getstart {
+    background-image: url('../../assets/imgs/imgInitial.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.buttonCOntainer{
+    text-align: center;
+    position: absolute;
+    top: 25%;
+}
+
+.buttonCOntainer button{
+    background: rgb(4, 9, 11);
+    height: 25%;
+    width: 42%;
+}
+
+.buttonCOntainer button span{
+    display: block;
+}
+
+.buttonCOntainer button span img{
+    display: block;
+    width: 74%;
+    margin: 1em 0px;
+    position: relative;
+    left: 13%;
+}
+
+.buttonCOntainer button span label{
+    color: rgb(8, 163, 58);
+}
+
+.menu-inner {
+    width: 100%;
+    z-index: 1;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.myMenu{
+    background-color: red;
+}

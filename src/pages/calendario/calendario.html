@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="negro">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Calendario</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Abajo para refrescar" refreshingSpinner="circles"
+      refreshingText="Recargando...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-item-divider><b>Eventos recientes</b></ion-item-divider>
+  <ion-list *ngFor="let item of calendary">
+    <ion-item (click)="descripcion(item)">
+      <div item-start class="square" style="background-color: rgb(8, 163, 58)">
+        <h1><b>{{item.start | date: 'dd' }}</b></h1>
+        <p>{{item.start | date: 'MMMM' }}</p>
+      </div>
+      <h2>Evento: {{item.title}}</h2>
+      <h3>{{item.body}}</h3>
+      <p>Inicio: {{item.start | date}}</p>
+      <p>Fin: {{item.end | date}}</p>
+    </ion-item>
+    <br>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar color="negro">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Dinamizadores</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Abajo para refrescar" refreshingSpinner="circles"
+      refreshingText="Recargando...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card *ngFor="let item of dina">
+    <div style="background-color: #f2f2f2">
+      <p><b>Area: {{item.area}}</b></p>
+    </div>
+    <div>
+      <img [src]="item.imagen">
+    </div>
+    <ion-item>
+      <div item-start class="square" style="background-color: #f2f2f2">
+        <p><b>{{item.parametro_id}}</b></p>
+        <p>Grado</p>
+      </div>
+      <h2>{{item.titulo}}</h2>
+      <p>{{item.descripcion}}</p>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button icon-start clear item-end (click)="descripcion(item)">
+        <ion-icon name="md-eye"></ion-icon>
+        Ver más
+      </button>
+    </ion-item>
+  </ion-card>
+
+</ion-content>

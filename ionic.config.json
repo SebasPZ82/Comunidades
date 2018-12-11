@@ -1,0 +1,13 @@
+{
+  "name": "comunidades",
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://www.lyl.com.co/api/calendario"
+    }
+  ],
+  "type": "ionic-angular"
+}

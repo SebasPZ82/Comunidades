@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="negro">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Descripcion del dinamizador</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card>
+    <div>
+      <img [src]="data.imagen">
+    </div>
+    <ion-item>
+      <h2 text-center>{{data.titulo}}</h2>
+      <p>{{data.descripcion}}</p>
+    </ion-item>
+  </ion-card>
+
+</ion-content>

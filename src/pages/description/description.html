@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="negro">
+    <button ion-button menuToggle style="background-color: rgb(22, 159, 132)">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Descripcion del evento</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item-divider><b>{{data.title}}</b></ion-item-divider>
+  <ion-item>
+      <img *ngIf="data.imagen" [src]="data.imagen" style="width: 100%; height: 100%;">
+      <img *ngIf="!data.imagen" src="../../assets/imgs/logo.png" style="width: 100%; height: 100%;" />
+  </ion-item>
+  <ion-item>
+    <h2>{{data.body}}</h2>
+  </ion-item>
+  <ion-item>
+    <p><b>Lugar:</b>{{data.lugar}}</p>
+  </ion-item>
+  <ion-item>
+    <p><b>Fecha Desde:</b> {{data.start | date}}</p>
+  </ion-item>
+  <ion-item>
+    <p><b>Fecha Hasta:</b> {{data.end | date}}</p>
+  </ion-item>
+  <ion-item>
+    <p><b>Informacion:</b> {{data.url}}</p>
+  </ion-item>
+  <iframe src="https://player.vimeo.com/video/12345" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+  <button ion-button color="secondary" full>Asistire</button>
+
+</ion-content>

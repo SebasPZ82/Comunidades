@@ -1,0 +1,36 @@
+page-login {
+
+    .getstart {
+        background-image: url('../../assets/imgs/imgInitial.jpg');
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+
+    .list .item, .list .item-complex .item-content {
+        background: rgba(255,255,255,0);
+      }
+      .item .item-content.activated {
+        background-color: purple !important;
+      }
+
+    .list-initial{
+        position: absolute;
+        top: 25%
+    }
+
+    .button-initial{
+        position: absolute;
+        top: 80%;
+    }
+
+    .placeholder-text{
+        color: aliceblue;
+        font-size: 0.9em;
+    }
+
+    .scroll-content{
+        padding-bottom: 0px !important;
+    }
+
+}
+

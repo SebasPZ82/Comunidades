@@ -1,0 +1,34 @@
+page-list {
+
+    .getstart {
+        background-image: url('../../assets/imgs/imgInitial.jpg');
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+
+    .buttonCOntainer{
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    }
+
+    .buttonCOntainer button{
+        background: rgb(4, 9, 11);
+        height: 25%;
+        width: 42%;
+    }
+
+    .buttonCOntainer button span{
+        display: inline-block;
+    }
+
+    .buttonCOntainer button span img{
+        display: block;
+        width: 100%;
+        margin: 1em 0px;
+    }
+
+    .buttonCOntainer button span label{
+        color: green;
+    }
+}

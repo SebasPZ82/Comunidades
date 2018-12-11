@@ -1,0 +1,26 @@
+<ion-menu [content]="content"  id="myMenu">
+  <ion-content class="getstart" padding>
+    <h1 text-center style="color: aliceblue; position: relative; top: 10%"><b>Acceso Comunidades</b></h1>
+    <div class="buttonCOntainer">
+      <button ion-button menuClose (click)="pageCalendario()">
+        <img src="../../assets/imgs/calendario.png">
+        <label>Calendario</label>
+      </button>
+      <button ion-button menuClose (click)="pageCarrito()" disabled="true">
+        <img src="../../assets/imgs/Carrito.png">
+        <label>Catalogo</label>
+      </button>
+      <button ion-button menuClose (click)="pageDina()">
+        <img src="../../assets/imgs/dinamizadores.png">
+        <label>Dinamizadores</label>
+      </button>
+      <button ion-button menuClose (click)="pageCarrito()" disabled="true">
+        <img src="../../assets/imgs/Carrito.png">
+        <label>Catalogo</label>
+      </button>
+    </div>
+  </ion-content>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="true"></ion-nav>

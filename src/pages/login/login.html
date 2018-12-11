@@ -1,0 +1,50 @@
+<ion-content class="getstart" padding>
+
+  <h1 text-center style="color: aliceblue; position: relative; top: 10%;"><b>Acceso Comunidades</b></h1>
+
+  <form (ngSubmit)="login()" [formGroup]="loginForm" style="position: relative; top: 30%;">
+    <ion-list>
+      <ion-item [ngClass]="{ invalid: emailErrors.hasError('*', ['touched', 'dirty']) }">
+        <ion-icon name="md-people" color="secondary" item-start></ion-icon>
+        <ion-input type="text" placeholder="Email" class="placeholder-text" formControlName="email"></ion-input>
+      </ion-item>
+
+      <div ngxErrors="email" #emailErrors="ngxErrors">
+        <div [ngxError]="['email', 'required']" [when]="['touched', 'dirty']">
+          <p style="color: aliceblue;">Tiene que ser un email valido</p>
+        </div>
+      </div>
+
+      <ion-item [ngClass]="{ invalid: passwordErrors.hasError('*', ['touched']) }">
+        <ion-icon name="md-lock" color="secondary" item-start></ion-icon>
+        <ion-input type="password" placeholder="Password" class="placeholder-text" formControlName="password"></ion-input>
+      </ion-item>
+
+      <div ngxErrors="password" #passwordErrors="ngxErrors">
+        <div [ngxError]="['minlength', 'required']" [when]="['touched']">
+          <p style="color: aliceblue;">Tu contraseña tiene menos de 5 caracteres</p>
+        </div>
+      </div>
+
+    </ion-list>
+
+    <div style="margin-top:20%;">
+      <!-- <div class="form-error">{{loginError}}</div> -->
+
+      <div text-center style="color: aliceblue;">
+        <p style="text-align: end">¿Olvido <b>Contraseña</b>?</p>
+      </div>
+
+      <div text-center>
+        <button ion-button full type="submit" [disabled]="!loginForm.valid" color="secondary" round>Ingresar</button>
+      </div>
+
+      <div text-center style="color: aliceblue; ">
+        <p>Registrar <b>nuevo usuario</b></p>
+      </div>
+    </div>
+  </form>
+  <ion-footer text-center style="color: aliceblue; font-size: 0.8em;">
+    <p>Desarrolado por <b style="color: rgb(22, 159, 132);">Site Digital</b></p>
+  </ion-footer>
+</ion-content>
